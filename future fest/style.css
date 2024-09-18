@@ -79,7 +79,7 @@ header .logo{
     display: flex;
     align-items: center;
     padding: 10px 12px;
-    background: var(--main-color);
+    background: #236e19;
     border-radius: 20px;
 }
 
@@ -144,6 +144,11 @@ section {
     line-height: 32px;
     margin-bottom: 2.3rem;
     
+}
+
+.home-text p span{
+   
+    font-weight:200s; 
 }
 
 .choose_btn {
