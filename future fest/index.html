@@ -15,30 +15,132 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
+<style>
+    /* Estilizando o menu lateral */
+    .side-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #4b8e3b;
+        /* Alterando a cor de fundo para um verde mais vibrante */
+        overflow-x: hidden;
+        transition: width 0.3s ease;
+        padding-top: 60px;
+        color: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        /* Sombra para dar profundidade */
+    }
 
+    /* Estilizando o conteúdo do menu */
+    .menu-header {
+        padding: 16px;
+        background-color: #3a7031;
+        /* Cor de fundo um pouco mais escura para o cabeçalho */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #ffffff;
+        /* Borda inferior para separação */
+    }
+
+    .menu-content {
+        padding: 16px;
+        font-size: 16px;
+        /* Ajuste de tamanho de fonte */
+        line-height: 1.5;
+        /* Melhor legibilidade */
+    }
+
+    .side-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 15px;
+        /* Espaçamento interno */
+        display: block;
+        /* Faz com que os links ocupem toda a largura */
+        transition: background-color 0.3s;
+        /* Transição suave na mudança de cor de fundo */
+    }
+
+    .side-menu a:hover {
+        background-color: #5a9f4e;
+        /* Cor de fundo ao passar o mouse */
+        color: #ffffff;
+        /* Garantir que o texto fique branco */
+    }
+
+    /* Quando o menu estiver aberto, ocupará 30% da tela */
+    .side-menu.open {
+        width: 30%;
+    }
+
+    /* Estilizando a entrada de texto no chat */
+    .chat input {
+        width: calc(100% - 20px);
+        /* Ajustar a largura para o preenchimento */
+        padding: 10px;
+        border: 2px;
+        border-radius: 5px;
+        /* Borda arredondada */
+        margin-top: -10px;
+        /* Margem acima */
+    }
+
+    .chat input:focus {
+        outline: none;
+        /* Remove o contorno padrão ao focar */
+        box-shadow: 0 0 5px rgba(7, 81, 11, 0.5);
+        /* Sombra ao focar */
+    }
+
+    .menu-chat {
+        margin-top: -30px;
+    }
+</style>
 
 <body>
-    <!-- Header  -->
+    <!-- Header -->
     <header class="header sticky">
-        <a style="color:#236e19; padding-left: 45px;" class="logo">
+        <a class="logo" style="color:#236e19; padding-left: 45px;">
             <p>Amazônia Verde</p>
         </a>
         <ul class="navbar">
-            <li><a href="#home">Home </a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#extinção">Extinção</a></li>
             <li><a href="#sobre-nos">Sobre nós</a></li>
-            <li><a href="#Serviços">Serviços</a></li>
+            <li><a href="#serviços">Serviços</a></li>
             <li><a href="#cadastro">Cadastra-se</a></li>
-            <li><a href="#Creators">Criadores</a></li>
-
+            <li><a href="#creators">Criadores</a></li>
         </ul>
 
-        <div style="margin-top: -17px;" class="h-icons">
-            <a href="#"><img style="width: 20px;" src="img/menu-de-tres-linhas.png"></a>
-
+        <div class="h-icons">
+            <a href="javascript:void(0);" onclick="toggleMenu()">
+                <img style="width: 20px;" src="img/menu-de-tres-linhas.png" alt="Menu">
+            </a>
         </div>
 
+        <div id="sideMenu" class="side-menu">
+            <div style="margin-top: -60px;" class="menu-header">
+                <h3 style="margin-top: .5rem;">ChatBot</h3>
+                <a href="javascript:void(0);" onclick="toggleMenu()"><img style="width: 15px;"
+                        src="./img/close-removebg-preview.png"></a>
+            </div>
+            <div class="menu-chat">
+                <div class="menu-content">
+                    <p><b style="font-size:20px;">Bem-vindo </b>ao nosso <b style="font-size:20px;"> chatBot </b>!
+                        em que o usuário poderá escolher
+                        produtos ecológicos baseados em suas preferências e necessidades</p>
+                </div>
+                <div class="chat" style="padding: .5rem;margin-top: -10 ;">
+                    <label for="usuario" class="form-label">usuario:</label>
+                    <input type="text" placeholder="Digite sua mensagem!">
 
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Home Section  -->
@@ -183,8 +285,11 @@
         </a>
         <a href="macacoPrego.html" style="text-decoration: none;">
             <div class="c-mainbox">
-                <div class="container-img">
-                    <img src="img/Macaco-prego.jpg" alt="foto-Macaco-prego">
+                <div class="scroll-container">
+                    <div class="container-img">
+
+                        <img src="img/Macaco-prego.jpg" alt="foto-Macaco-prego">
+                    </div>
                 </div>
                 <div class="container-text" style="color:#000">
                     <p>Macaco-prego
@@ -419,6 +524,18 @@
 
             let typed = new Typed("#typed-text", configuracao);
         });
+
+
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            if (menu.classList.contains("open")) {
+                menu.classList.remove("open");
+            } else {
+                menu.classList.add("open");
+            }
+        }
+
+
     </script>
 </body>
 
