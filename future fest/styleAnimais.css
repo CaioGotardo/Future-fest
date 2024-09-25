@@ -110,26 +110,29 @@ header .logo{
 
 main {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: center; /* Centraliza a imagem e o texto horizontalmente */
+    align-items: flex-start; /* Garante que o texto comece no topo da imagem */
+    gap: 20px; /* Espaço entre a imagem e o texto */
     padding: 20px;
-    background-color: #fff; 
-    min-height: calc(100vh - 56px); 
-    transition: background-color 0.3s; 
+    background-color: #fff;
+    min-height: calc(100vh - 56px);
+    transition: background-color 0.3s;
+    margin-top: 200px;
 }
 
-
-
 aside {
-    margin-left: 65px;
     max-width: 50%; 
+    display: flex;
+    justify-content: center; /* Centraliza a imagem dentro do aside */
 }
 
 article {
     max-width: 45%;
-    padding-right: 250px; 
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mantém o texto no topo */
 }
-
 img {
     position: relative;
     width: 100%; 
