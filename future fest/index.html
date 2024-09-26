@@ -24,33 +24,33 @@
         top: 0;
         right: 0;
         background-color: #4b8e3b;
-        /* Alterando a cor de fundo para um verde mais vibrante */
+
         overflow-x: hidden;
         transition: width 0.3s ease;
         padding-top: 60px;
         color: white;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-        /* Sombra para dar profundidade */
+
     }
 
     /* Estilizando o conteúdo do menu */
     .menu-header {
         padding: 16px;
         background-color: #3a7031;
-        /* Cor de fundo um pouco mais escura para o cabeçalho */
+
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 2px solid #ffffff;
-        /* Borda inferior para separação */
+
     }
 
     .menu-content {
         padding: 16px;
         font-size: 16px;
-        /* Ajuste de tamanho de fonte */
+
         line-height: 1.5;
-        /* Melhor legibilidade */
+
     }
 
     .side-menu a {
@@ -58,21 +58,21 @@
         text-decoration: none;
         font-size: 20px;
         padding: 10px 15px;
-        /* Espaçamento interno */
+
         display: block;
-        /* Faz com que os links ocupem toda a largura */
+
         transition: background-color 0.3s;
-        /* Transição suave na mudança de cor de fundo */
+
     }
 
     .side-menu a:hover {
         background-color: #5a9f4e;
-        /* Cor de fundo ao passar o mouse */
+
         color: #ffffff;
-        /* Garantir que o texto fique branco */
+
     }
 
-    /* Quando o menu estiver aberto, ocupará 30% da tela */
+
     .side-menu.open {
         width: 30%;
     }
@@ -80,20 +80,20 @@
     /* Estilizando a entrada de texto no chat */
     .chat input {
         width: calc(100% - 20px);
-        /* Ajustar a largura para o preenchimento */
+
         padding: 10px;
         border: 2px;
         border-radius: 5px;
-        /* Borda arredondada */
+
         margin-top: -10px;
-        /* Margem acima */
+
     }
 
     .chat input:focus {
         outline: none;
-        /* Remove o contorno padrão ao focar */
+
         box-shadow: 0 0 5px rgba(7, 81, 11, 0.5);
-        /* Sombra ao focar */
+
     }
 
     .menu-chat {
@@ -102,6 +102,7 @@
 </style>
 
 <body>
+
     <!-- Header -->
     <header class="header sticky">
         <a class="logo" style="color:#236e19; padding-left: 45px;">
@@ -116,9 +117,9 @@
             <li><a href="#Creators">Criadores</a></li>
         </ul>
 
-        <div class="h-icons">
+        <div class="h-icons" style="margin-top: -10px;">
             <a href="javascript:void(0);" onclick="toggleMenu()">
-                <img style="width: 20px;" src="img/menu-de-tres-linhas.png" alt="Menu">
+                <img style="width: 20px;" src="img/chat-gpt-removebg-preview.png" alt="Menu">
             </a>
         </div>
 
@@ -149,8 +150,7 @@
             <h1>Bem vindo a <span id="typed-text"></span></h1>
             <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
             <p><span>Nós</span> somos uma empresa em que tem como objeivo a prevenção do meio ambiene, em que a cada
-                cadasro obtido
-                plantaremos 1 arvore na area de queimadas na amazonia</p>
+                cadasro obtido plantaremos 1 arvore na area de queimadas na amazonia</p>
             <a href="#sobre-nos" class="choose_btn" style="text-decoration: none;">Mais Sobre</a>
         </div>
         <div class="home-img">
@@ -310,7 +310,8 @@
                     promover a sustentabilidade por meio da venda de produtos ecológicos. Para cada item vendido,
                     destinamos parte do valor ao replantio de árvores na Amazônia, e para cada novo cadastro, uma árvore
                     será plantada. Assim, transformamos cada compra em uma oportunidade de regenerar a natureza.</p>
-                <p>Queremos criar um impacto positivo e um futuro mais verde para as próximas gerações. Ao escolher
+                <p class="texto-remover">Queremos criar um impacto positivo e um futuro mais verde para as próximas
+                    gerações. Ao escolher
                     nossos produtos, você se une a nós na revitalização da Amazônia. Junte-se a nós e faça a diferença!
 
                 </p>
@@ -415,7 +416,7 @@
                 <b>R$39,99 por mês</b>
                 <a href="planos.html" class="btn-join">Junte-se Agora</a>
             </div>
-            <div class="ajuda-nos-box border border-success">
+            <div class="ajuda-nos-box border border-success" id="box3">
                 <h3>Plano Premium</h3>
                 <p>Ganhe 30% de desconto, acesso VIP e brindes especiais.</p>
                 <b>R$59,99 por mês</b>
