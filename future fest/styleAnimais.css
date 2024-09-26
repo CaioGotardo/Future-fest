@@ -99,20 +99,11 @@ header .logo{
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
 main {
     display: flex;
-    justify-content: center; /* Centraliza a imagem e o texto horizontalmente */
-    align-items: flex-start; /* Garante que o texto comece no topo da imagem */
-    gap: 20px; /* Espaço entre a imagem e o texto */
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px;
     padding: 20px;
     background-color: #fff;
     min-height: calc(100vh - 56px);
@@ -123,7 +114,7 @@ main {
 aside {
     max-width: 50%; 
     display: flex;
-    justify-content: center; /* Centraliza a imagem dentro do aside */
+    justify-content: center; 
 }
 
 article {
@@ -133,15 +124,11 @@ article {
     flex-direction: column;
     justify-content: flex-start; /* Mantém o texto no topo */
 }
+
 img {
     position: relative;
-    width: 100%; 
+    width: 100%;
 }
-
-
-
-
-
 
 footer {
     background-color: #1e5a0e;
